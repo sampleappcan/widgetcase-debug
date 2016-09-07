@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <style>
+            .colorWhite{
+                color:white;
+                font-size:1.2em;
+            }
+            .btn {
+                padding: .3em;
+                min-height: 1.5em;
+                text-align: center;
+                width:3em;
+            }
+        </style>
+    </head>
+    <body id = "body" class="um-vp" ontouchstart>
+        <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+            <div id="header" >
+                <div class="ub" style="background:#D33D3E;color:#fff;">
+                    <div class="ub ub-ac ub-pc ub-f1" style="background:#D33D3E;color:#F8C7CB;overflow-x: auto;width: 85%;">
+                        <div id="top1" class="btn  ub ub-ac ub-pc colorWhite">推荐</div>
+                        <div id="top2" class="btn  ub ub-ac ub-pc">视频</div>
+                        <div id="top3" class="btn  ub ub-ac ub-pc">图片</div>
+                        <div id="top4" class="btn  ub ub-ac ub-pc">娱乐</div>
+                    </div>
+                    <div class="ub ub-ac ub-pe ub-f1">
+                        <div id="plus" class="fa fa-plus" style="margin-right: .7em"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l" style="background:#dddddd">
+            </div>
+            <!--content结束-->
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+    </body>
+    <script>
+     var top;
+     var availHeight;
+     var height;
+     var listViewId1 = "index1";
+     var listViewId2 = "index2";
+     var listViewId3 = "index3";
+     var listViewId4 = "index4";
+     appcan.ready(function() {
+         top = $("#header1").offset().height;
+         availHeight = $("#body").offset().height;
+         height = availHeight-top;
+         
+         uexNBListView.cbInitLayout = function(data){//初始化
+            var data = JSON.parse(data);
+            if(data.errorCode == 0){
+                if(data.listViewId == listViewId1){
+                    setIndexItem1(listViewId1);//设置列表数据,该方法需要在initLayout方法之后调用
+                }else if(data.listViewId == listViewId2){
+                    setIndexItem2(listViewId2);
+                }else if(data.listViewId == listViewId3){
+                    setIndexItem3(listViewId3);
+                }else if(data.listViewId == listViewId4){
+                    setIndexItem4(listViewId4);
+                }
+            }
+        }
+        
+        uexNBListView.cbSetItems = function(data){
+            var data = JSON.parse(data);
+            if(data.errorCode == 0){
+                if(data.listViewId == listViewId1){
+                    openIndex(listViewId1, top, height);
+                }else if(data.listViewId == listViewId2){
+                    openIndex(listViewId2, top, height);
+                }else if(data.listViewId == listViewId3){
+                    openIndex(listViewId3, top, height);
+                }else if(data.listViewId == listViewId4){
+                    openIndex(listViewId4, top, height);
+                }
+            }
+        }
+        
+        
+        initIndexLayout(listViewId1);
+        //setTimeout(function() {             
+            initIndexLayout(listViewId2);
+            initIndexLayout(listViewId3);
+            initIndexLayout(listViewId4);
+         //}, 1000);
+     })
+    appcan.button("#top1", "btn-act", function() {
+         $(".btn").removeClass("colorWhite");
+         $("#" + this.id).addClass("colorWhite");
+        var params = {
+            listViewId:listViewId1
+        }
+        uexNBListView.show(JSON.stringify(params));
+        
+    })
+    appcan.button("#top2", "btn-act", function() {
+         $(".btn").removeClass("colorWhite");
+         $("#" + this.id).addClass("colorWhite");
+        var params = {
+            listViewId:listViewId2
+        }
+        uexNBListView.show(JSON.stringify(params));
+        
+    })
+    appcan.button("#top3", "btn-act", function() {
+         $(".btn").removeClass("colorWhite");
+         $("#" + this.id).addClass("colorWhite");
+        var params = {
+            listViewId:listViewId3
+        }
+        uexNBListView.show(JSON.stringify(params));
+        
+    })
+    appcan.button("#top4", "btn-act", function() {
+         $(".btn").removeClass("colorWhite");
+         $("#" + this.id).addClass("colorWhite");
+        var params = {
+            listViewId:listViewId4
+        }
+        uexNBListView.show(JSON.stringify(params));
+        
+    })
+
+    function openIndex(listViewId, top, height){
+        var params = {
+            listViewId:listViewId,
+            left: 0,//(必选) 左间距
+            top: top,//(必选) 上间距
+            width:window.screen.width,//(必选) 宽
+            height:height,//(必选) 高
+            openType:0,//(可选) 打开方式,0-webView,1-window,2-容器
+            swipeMode:2,//(可选) 侧滑模式，0-右滑，1-左滑，2-左右滑，3-不能滑。默认3
+            refreshMode:0//(可选) 刷新模式，0-无，1-下拉，2-上拉，3-上拉下拉。默认3
+        }
+        uexNBListView.open(JSON.stringify(params));
+    }
+    function initIndexLayout(id){
+        var params = {
+            listViewId:id,
+            layout:{
+                center:["res://layout_index_item1.xml",
+                "res://layout_index_item2.xml",
+                "res://layout_index_item3.xml",
+                "res://layout_video_item1.xml"]
+            }
+        }
+        uexNBListView.initLayout(JSON.stringify(params));
+    }
+    function setIndexItem1(id){
+        var params = {
+            listViewId:id,
+            dataList:[
+               {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video11.jpg",
+                        "title":"what?!",
+                        "time":"4:05",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                },
+                {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video1.jpg",
+                        "title":"贾云馨说都来看我的大板牙",
+                        "time":"4:05",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                },
+                {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video2.jpg",
+                        "title":"神经奶爸贾乃亮和鬼马精灵贾云馨的那些奇葩事",
+                        "time":"5:15",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                },
+                {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video12.jpg",
+                        "title":"好重啊！",
+                        "time":"5:15",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                },
+                {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video13.jpg",
+                        "title":"粑粑的假期",
+                        "time":"47:05",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                },
+                {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video14.jpg",
+                        "title":"看我们的小花",
+                        "time":"24:42",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                },
+                {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video3.jpeg",
+                        "title":"怪我咯",
+                        "time":"47:05",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                },
+                {
+                    center:{
+                        "layoutId":"video-item1",
+                        "picPath":"res://img/news/video4.jpg",
+                        "title":"你再说我黑，试试！",
+                        "time":"24:42",
+                        "favorable":"0",
+                        "dislike":"0",
+                        "comment":"0"
+                    }
+                }
+            ]
+        }
+        uexNBListView.setItems(JSON.stringify(params));
+    }
+    function setIndexItem2(id){
+        var params = {
+            listViewId:id,
+            dataList:[
+                {
+                    center:{
+                        "layoutId":"index-item2",
+                        "title":'"平语"近人--习近平心中的政法工作',
+                        "markImg":"res://img/hot.png",
+                        "markVisible":2,
+                        "source":"陈里",
+                        "comment":"3评论",
+                        "time":"",
+                        "picPath":"res://img/news/news6.png"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":'一张GIF图告诉你"超级"寒潮如何速冻全国',
+                        "isHasPic":0,
+                        "isHasPic0":2,
+                        "picPath1":"res://img/news/news7.png",
+                        "picPath2":"res://img/news/news8.png",
+                        "picPath3":"res://img/news/news9.png",
+                        "markImg":"res://img/hot.png",
+                        "markVisible":2,
+                        "source":"中国天气",
+                        "comment":"467评论",
+                        "time":"20分钟前"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":"中央政法委书记为何突然迷上这个？",
+                        "isHasPic":2,
+                        "isHasPic0":2,
+                        "markImg":"res://img/top.png",
+                        "markVisible":2,
+                        "source":"长安街知事",
+                        "comment":"235评论",
+                        "time":"17分钟前"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":'什么事情让习近平"花精力最多"？',
+                        "isHasPic":2,
+                        "isHasPic0":2,
+                        "markImg":"res://img/top.png",
+                        "markVisible":2,
+                        "source":"专题",
+                        "comment":"3247评论",
+                        "time":"20分钟前"
+                    }
+                }
+            ]
+        }
+        uexNBListView.setItems(JSON.stringify(params));
+    }
+    function setIndexItem3(id){
+        var params = {
+            listViewId:id,
+            dataList:[
+                {
+                    center:{
+                        "layoutId":"index-item2",
+                        "title":'"平语"近人--习近平心中的政法工作',
+                        "markImg":"res://img/hot.png",
+                        "markVisible":2,
+                        "source":"陈里",
+                        "comment":"3评论",
+                        "time":"",
+                        "picPath":"res://img/news/news6.png"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":'一张GIF图告诉你"超级"寒潮如何速冻全国',
+                        "isHasPic":0,
+                        "isHasPic0":2,
+                        "picPath1":"res://img/news/news7.png",
+                        "picPath2":"res://img/news/news8.png",
+                        "picPath3":"res://img/news/news9.png",
+                        "markImg":"res://img/hot.png",
+                        "markVisible":2,
+                        "source":"中国天气",
+                        "comment":"467评论",
+                        "time":"20分钟前"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":"中央政法委书记为何突然迷上这个？",
+                        "isHasPic":2,
+                        "isHasPic0":2,
+                        "markImg":"res://img/top.png",
+                        "markVisible":2,
+                        "source":"长安街知事",
+                        "comment":"235评论",
+                        "time":"17分钟前"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":'什么事情让习近平"花精力最多"？',
+                        "isHasPic":2,
+                        "isHasPic0":2,
+                        "markImg":"res://img/top.png",
+                        "markVisible":2,
+                        "source":"专题",
+                        "comment":"3247评论",
+                        "time":"20分钟前"
+                    }
+                }
+            ]
+        }
+        uexNBListView.setItems(JSON.stringify(params));
+    }function setIndexItem4(id){
+        var params = {
+            listViewId:id,
+            dataList:[
+                {
+                    center:{
+                        "layoutId":"index-item2",
+                        "title":'"平语"近人--习近平心中的政法工作',
+                        "markImg":"res://img/hot.png",
+                        "markVisible":2,
+                        "source":"陈里",
+                        "comment":"3评论",
+                        "time":"",
+                        "picPath":"res://img/news/news6.png"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":'一张GIF图告诉你"超级"寒潮如何速冻全国',
+                        "isHasPic":0,
+                        "isHasPic0":2,
+                        "picPath1":"res://img/news/news7.png",
+                        "picPath2":"res://img/news/news8.png",
+                        "picPath3":"res://img/news/news9.png",
+                        "markImg":"res://img/hot.png",
+                        "markVisible":2,
+                        "source":"中国天气",
+                        "comment":"467评论",
+                        "time":"20分钟前"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":"中央政法委书记为何突然迷上这个？",
+                        "isHasPic":2,
+                        "isHasPic0":2,
+                        "markImg":"res://img/top.png",
+                        "markVisible":2,
+                        "source":"长安街知事",
+                        "comment":"235评论",
+                        "time":"17分钟前"
+                    }
+                },
+                {
+                    center:{
+                        "type":"index-item1",
+                        "title":'什么事情让习近平"花精力最多"？',
+                        "isHasPic":2,
+                        "isHasPic0":2,
+                        "markImg":"res://img/top.png",
+                        "markVisible":2,
+                        "source":"专题",
+                        "comment":"3247评论",
+                        "time":"20分钟前"
+                    }
+                }
+            ]
+        }
+        uexNBListView.setItems(JSON.stringify(params));
+    }
+        
+    </script>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root layoutId = "me">
+    <linearlayout width="-1" height="-2" orientation="vertical"  background="#F4F5F7">
+        <linearlayout id = "content" width = "-1" gravity = "centerY"
+                      height = "${per0}" background = "#CDCDCD">
+            <linearlayout orientation="horizontal" width="-1" height="-2" padding = "30 20">
+                <linearlayout weight="1" width="-1" height="-2" gravity = "centerX">
+                    <img id = "phone" width = "${per}" height = "${per}" src = "res://img/phone.png"
+                        scale = "1" margin = "17"/>
+                 </linearlayout>
+                <linearlayout weight="1" width="-1" height="-2" gravity = "centerX">
+                    <img id = "weixin" width = "${per}" height = "${per}" src = "res://img/weixin.png"
+                          scale = "1" margin = "17"/>
+                   </linearlayout>
+                <linearlayout weight="1" width="-1" height="-2" gravity = "centerX">
+                    <img id = "qq" width = "${per}" height = "${per}" src = "res://img/qq.png"
+                          scale = "1" margin = "17"/>
+                </linearlayout>
+                <linearlayout weight="1" width="-1" height="-2" gravity = "centerX">
+                    <img id = "sina" width = "${per}" height = "${per}" src = "res://img/sina.png"
+                          scale = "1" margin = "17"/>
+                </linearlayout>
+            </linearlayout>
+            <linearlayout width = "-1" height="-2" gravity="centerX">
+                <linearlayout width="-2" height="-2" gravity="centerY" orientation="horizontal"
+                                background="#B4B4B4" padding = "15">
+                    <text id = "more" width = "-2" height = "-2" text="更多登录方式"
+                          textSize = "14" textColor = "#ffffff"/>
+                    <img width = "-2" height = "-2" src = "res://img/angle_right1.png"
+                         margin="15 0 0 0"/>
+                </linearlayout>
+            </linearlayout>
+        </linearlayout>
+        <linearlayout orientation="horizontal" background="#ffffff" width="-1" height="${per1}"
+            gravity="centerY" padding="0 15">
+            <linearlayout width="-2" height="-1" weight = "1" gravity="centerX" >
+                <img width="50" height="50" src = "res://img/star.png"
+                     margin="0 0 0 10"/>
+                <text id = "more" width = "-2" height = "-2" text="收藏"
+                      textSize = "14" textColor = "#000000"/>
+            </linearlayout>
+            <text width = "2" height = "-1" background = "#EEEEEE" float = "right"/>
+            <linearlayout width="-2" height="-1" weight = "1" gravity="centerX">
+                <img width="50" height="50" src = "res://img/night.png"
+                     margin="0 0 0 10"/>
+                <text id = "more" width = "-2" height = "-2" text="夜间"
+                      textSize = "14" textColor = "#000000"/>
+            </linearlayout>
+            <text width = "2" height = "-1" background = "#EEEEEE" float = "right"/>
+            <linearlayout width="-2" height="-1" weight = "1" gravity="centerX">
+                <img width="50" height="50" src = "res://img/setting.png"
+                     margin="0 0 0 10"/>
+                <text id = "more" width = "-2" height = "-2" text="设置"
+                      textSize = "14" textColor = "#000000"/>
+            </linearlayout>
+        </linearlayout>
+        <linearlayout width="-1" height="-2" orientation="horizontal" padding="50 0 20 0"
+            gravity="centerY" background="#ffffff" margin = "0 12">
+            <text width = "-2" height = "-2" text="好友状态" weight = "1"
+                  textSize = "16" textColor = "#000000"/>
+            <img width = "-2" height = "${per2}" src = "res://img/angle_right.png"
+                 margin="15 12"/>
+        </linearlayout>
+    </linearlayout>
+</root>

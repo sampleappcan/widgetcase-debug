@@ -1,0 +1,405 @@
+#wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+#geren {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.gr {
+    margin-bottom: 0.2em;
+}
+.jzb {
+    margin-right: 3.0em;
+}
+
+img {
+    height: 4em;
+    width: 4em;
+}
+
+#listview {
+    margin: 0.5em;
+    font-size: 0.9em;
+    background-color: white;
+}
+
+#tuichu {
+    height: 2em;
+    margin: 1.0em 0.5em;
+    background-color: #000066;
+    color: white;
+}
+
+/* 我的账户 */
+
+#left {
+
+    font-size: 1.2em;
+    margin-right: 1.0em;
+}
+
+#accountxx, #danweixx, #lianxiren {
+    background-color: white;
+    margin-bottom: 0.6em;
+}
+
+.zhxx, .dwxx, .lxrxx {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+#accountxx > div, #danweixx > div, #lianxiren > div {
+    padding: 0.4em 0 0.5em 0.4em;
+}
+
+/* 消息中心 */
+
+#xiaoxi {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+}
+#xiaoxi .outer {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.daohuo {
+    height: 2em;
+    background-color: #19DAEB;
+}
+.daohuo .tubiao {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+}
+
+.outer {
+    margin: 1.5em 0;
+}
+p {
+    text-indent: 2em;
+}
+.lianjie {
+    padding-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+.gongsi {
+    margin-bottom: 0.5em;
+}
+
+/* 全部订单 */
+
+.qbdd {
+    background-color: white;
+    margin-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+#to {
+    margin: 0 0.3em;
+}
+.dnxq {
+
+    color: #000000;
+}
+.ddbh {
+
+    border-bottom: 1.5px dashed #000000;
+}
+
+.ddbh > div {
+    margin: 0.5em 0.2em;
+    color: #0066FF;
+}
+.dnxq > div {
+    margin: 0.5em 0.5em;
+}
+.hbg {
+    width: 100%;
+    position: absolute;
+    position: fixed;
+    background: #000;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.6;
+}
+.ProdPage {
+    width: 100%;
+    height: 14em;
+}
+/* 订单详情 */
+.spxiangqing > div {
+    margin-top: 3px;
+}
+#ddxq_bt {
+    margin: 0.3em 0.3em;
+    background-color: white;
+}
+#ddxq_shxx {
+    margin: 0.3em 0.3em;
+    background-color: white;
+}
+.ddxq_bt1 {
+    padding: 0.5em 0.5em;
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+.ddxq_bt1+ div, .ddxq_bt3 {
+    padding: 10px 10px;
+}
+
+a {
+    color: #000000;
+}
+.ddxq_spxx_1 {
+    color: blue;
+}
+#ddxq_spxx {
+    margin: 0 0.3em;
+}
+.ddxq_spxx_22 {
+    margin-right: 0.5em;
+}
+.zl1, .sl1 {
+    margin-left: 1.0em;
+}
+#ddxq_spxx1 {
+    padding: 0.5em 0 0.5em 0.5em;
+    border-bottom: 2px solid blue;
+}
+.right {
+    margin-right: 12px;
+}
+
+#ddxq_spxx1 {
+    background-color: white;
+}
+#xq_spxx_jt1 {
+
+    padding: 0 0.5em 0.5em 0.5em;
+    margin-bottom: 0.5em;
+    background-color: white;
+}
+
+.mingcheng {
+    padding: 0.5em;
+    border-bottom: 1px dashed;
+}
+.ddzt {
+    margin-top: 0.5em;
+}
+
+#shouhuoxx {
+    padding: 0.5em 0 0.5em 0.5em;
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+.ddxq_shxx_11 {
+    padding: 0 0 6px 0;
+}
+.ddxq_shxx_11 > div {
+    padding: 6px 0.5em 0 0.5em;
+}
+
+span {
+    color: blue;
+}
+
+.left {
+
+    float: left;
+    width: 20%;
+    font-size: 1.0em;
+    border-bottom: 4px solid #000000;
+}
+
+.left1 {
+
+    float: left;
+    width: 20%;
+    border-bottom: 4px solid #77DDFF;
+    color: #77DDFF;
+}
+.wenzi {
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
+}
+.kz {
+    margin-bottom: 0.5em;
+}
+
+.zt {
+    position: absolute;
+    bottom: -10px;
+    left: 40%;
+}
+.zt1 {
+    position: absolute;
+    bottom: -22px;
+    left: 40%;
+}
+
+/* 订单查询 */
+
+#outer {
+
+    height: 100%;
+}
+#inner {
+    z-index: 0;
+}
+#outer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#txouter22 {
+
+    height: 100%;
+    
+}
+#txinner2 {
+    z-index: 9999;
+}
+#txouter2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 9998;
+}
+
+.ddcx {
+    background-color: #003377;
+    color: white;
+    padding: 0.6em;
+    font-size: 1em;
+}
+.kaishi, .jieshu, .zhuangtai {
+
+    border-bottom: 1.0px solid #DDDDDD;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+}
+.chaxun {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #FF5511;
+    margin-left: 0.8em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+}
+.quxiao {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #DDDDDD;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+}
+.yangshi {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.yangshi1 {
+
+    padding: 0.3em 0.8em;
+    
+}
+
+.yangshi2 {
+
+    border: 1.0px solid;
+    width: 8em;
+}
+
+#test {
+
+ /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: none;
+  outline: medium none;
+  background-color: #eee;
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  
+  
+
+ }
+ option{
+     text-align：center;
+ }
+ 
+.fixed {
+    position: fixed;
+    bottom: 0;
+    background-color: #F4A460;
+    color: white;
+    margin: 0 auto;
+}
+
+/*  修改头像 */
+
+.touxiang {
+    padding: 0.8em;
+    margin-bottom: 3px;
+    background-color: #66FF66;
+}
+.paizhao {
+    padding: 0.8em;
+    border-bottom: 1px solid #DDDDDD;
+    background-color: #eee;
+}
+.bendi {
+    padding: 0.8em;
+    background-color: #eee;
+}
+.tanchu {
+    height: auto;
+}
+.headportrait {
+
+    width: 100%;
+    height: 9em;
+    margin: 0 2em;
+}
+
+.headportrait1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    position: absolute;
+    border: 0
+}
+.txdaxiao {
+    width: 12em;
+}
+#txouter {
+    height: 100%;
+    z-index: 9999;
+}
+.txouter1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.3
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root layoutId = "index-item2">
+    <!--该布局为右边有一小图样式布局-->
+    <linearlayout id = "content" width = "-1" height = "-2" onClick = "onItemClick"
+                    background = "#ffffff" orientation = "vertical" gravity = "centerY"
+                  padding= "20 7">
+        <linearlayout width = "-1" height = "-2" orientation = "horizontal" >
+            <text id = "title" width = "-1" weight = "2" height = "-1" text="${title}" textSize = "16"
+                  textColor = "#000000"/>
+            <img id = "newsPic" width="-2" margin="0" height="${per}" src="${picPath}" weight="1"/>
+        </linearlayout>
+        <relativelayout width = "-1" height = "-2" gravity = "centerY" margin="0 10 0 0">
+            <img id = "mark" width = "${peri}" height = "${peri}" src = "${markImg}" visible ="${markVisible}"
+                 float = "left|centerY"/>
+            <text id = "sourceType" width = "-2" height = "-2" text="${source}" textSize = "10"
+                  textColor = "#999999" relation = "rightOf,mark" margin = "10 0 0 0"
+                  float = "centerY"/>
+            <text id = "comment" width = "-2" height = "-2" text="${comment}" textSize = "10"
+                  textColor = "#999999" relation = "rightOf,sourceType"  margin = "10 0 0 0"
+                  float = "centerY"/>
+            <text id = "time" width = "-2" height = "-2" text="${time}" textSize = "10"
+                  textColor = "#999999" relation = "rightOf,comment"  margin = "10 0 0 0"
+                  float = "centerY"/>
+            <img id = "delete" width = "-2" height = "-2" src = "res://img/del.png"
+                 float = "right|centerY" onClick = "onDeleteClick"/>
+        </relativelayout>
+        <text width = "-1" height = "1" background = "#EFEFEF" margin="0 10 0 0"/>
+    </linearlayout>
+</root>

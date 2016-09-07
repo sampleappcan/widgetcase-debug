@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <style>
+            #footer{
+                border-top:.5px solid #C9C9C9;
+                padding:0.25em 0;
+                background-color: #EEEEEE;
+            }
+            .icon1_act {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/index_act.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .icon2_act {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/video_act.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .icon3_act {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/topic_act.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .icon4_act {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/me_act.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .icon1 {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/index.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .icon2 {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/video.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .icon3 {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/topic.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .icon4 {
+                height: 2em;
+                width: 1em;
+                background-image: url('photo/me.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .tabview{
+                width:100%;
+                height:1.3em;
+                font-size:1.3em;
+                background-color:#D33D3E;
+            }
+            .colorWhite{
+                color:white;
+                font-size:1em;
+            }
+            .colorRed{
+                color:#D33D3E;
+                font-size:1em;
+            }
+            .colorBlack{
+                font-size:1em;
+            }
+            .btn {
+                padding: .3em;
+                min-height: 1.5em;
+                text-align: center;
+                width:3em;
+            }
+            .btn1 {
+                padding: .3em;
+                min-height: 1.5em;
+                text-align: center;
+                width:3.6em;
+            }
+            #top3 {
+                padding: .3em;
+                min-height: 1.5em;
+            }
+            #header1{
+                height:2.6em;
+            }
+        </style>
+    </head>
+    <body id = "body" class="um-vp" ontouchstart>
+        <div id="page_0" class="up ub ub-ver" tabindex="0">
+            <!--header开始-->
+            <div id="header1">
+                <div class="ub" style="background:#D33D3E;color:#fff;padding-top:.5em">
+                    <div class="ub ub-ac ub-pc ub-f3" style="background:#D33D3E;color:#F8C7CB;overflow-x: auto;width: 85%;">
+                        <div id="top10" class="btn  ub ub-ac ub-pc colorWhite">推荐</div>
+                        <!-- <div id="top11" class="btn  ub ub-ac ub-pc">热点</div>
+                        <div id="top12" class="btn  ub ub-ac ub-pc">视频</div>
+                        <div id="top13" class="btn  ub ub-ac ub-pc">社会</div>
+                        <div id="top14" class="btn  ub ub-ac ub-pc">图片</div>
+                        <div id="top15" class="btn  ub ub-ac ub-pc">娱乐</div> -->
+                    </div>
+                    <div class="ub ub-ac ub-pe ub-f3">
+                        <div id="plus" class="fa fa-plus" style="margin-right: .7em"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="header2" hidden="hidden">
+                <div  class="ub" style="background:#fff;color:#D33D3E;padding-top:.5em">
+                    <div class="ub ub-ac ub-pc ub-f3" style="overflow-x: auto;width: 85%;">
+                        <div id="top20" class="btn1 ub ub-ac ub-pc colorRed">推荐</div>
+                        <!-- <div id="top21" class="btn1 ub ub-ac ub-pc">看天下</div>
+                        <div id="top22" class="btn1 ub ub-ac ub-pc">音悦台</div>
+                        <div id="top23" class="btn1 ub ub-ac ub-pc">萌萌哒</div>
+                        <div id="top24" class="btn1 ub ub-ac ub-pc">爱生活</div>
+                        <div id="top25" class="btn1 ub ub-ac ub-pc">爱娱乐</div> -->
+                    </div>
+                    <div class="ub ub-ac ub-pe ub-f3">
+                        <div id="plus" class="fa fa-search" style="margin-right: .7em"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="header3" hidden="hidden" style="background:#fff;border-bottom:#cccccc solid 1px;padding-top:.5em">
+                <div id="top3" class="ub ub-ac ub-pc colorBlack ub-f3">关注</div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l" style="background:#dddddd">
+            </div>
+            <!--content结束-->
+            <div id = "footer" class="ub ub-ac ub-pc">
+                <div id="1" class="bc-bg ub ub-ac ub-pc icon1_act ub-f1"></div>
+                <div id="2" class="bc-bg ub ub-ac ub-pc icon2 ub-f1"></div>
+                <div id="3" class="bc-bg ub ub-ac ub-pc icon3 ub-f1"></div>
+                <div id="4" class="bc-bg ub ub-ac ub-pc icon4 ub-f1"></div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/openListview.js"></script>
+        <script src="js/setItem1.js"></script>
+    </body>
+    <script>
+        var preId = 1;
+        var afterId = 1;
+        var id="";
+        var listViewId1 = "index";
+        appcan.ready(function() {
+            var header1=2.6;
+            var top = $("#header1").offset().height;
+            var per=Number(top/header1);
+           // appcan.locStorage.setVal("per",per);
+            var bottom = $("#footer").offset().height;
+            var availHeight = $("#body").offset().height;
+            var height = availHeight-top-bottom;
+            showIndex(top,height);
+             uexNBListView.cbInitLayout = function(data){
+                var data = JSON.parse(data);
+                if(data.errorCode == 0){
+                    if(uexWidgetOne.platformName == "iOS"){
+                        if(data.listViewId == listViewId1){
+                            setIndexItem1(listViewId1,per);//设置列表数据,该方法需要在initLayout方法之后调用
+                        }else if(data.listViewId == listViewId3){
+                            setVideoItem1(listViewId3,per);
+                        }else if(data.listViewId == listViewId5){
+                            setTopicItem1(listViewId5,per);
+                        }else if(data.listViewId == listViewId7){
+                            setMeItem1(listViewId7,per);
+                        }
+                    }else{
+                        if(data.listViewId == listViewId1){
+                            setIndexItem(listViewId1,per);//设置列表数据,该方法需要在initLayout方法之后调用
+                        }else if(data.listViewId == listViewId3){
+                            setVideoItem(listViewId3,per);
+                        }else if(data.listViewId == listViewId5){
+                            setTopicItem(listViewId5,per);
+                        }else if(data.listViewId == listViewId7){
+                            setMeItem(listViewId7,per);
+                        }
+                    }
+                }
+            }
+        
+            uexNBListView.cbSetItems = function(data){
+                var data = JSON.parse(data);
+                if(data.errorCode == 0){
+                    if(data.listViewId == listViewId1){
+                        openIndex(listViewId1, sTop, sHeight);
+                    }else if(data.listViewId == listViewId3){
+                        openVideo(listViewId3, sTop, sHeight);
+                    }else if(data.listViewId == listViewId5){
+                        openTopic(listViewId5, sTop, sHeight);
+                    }else if(data.listViewId == listViewId7){
+                        openMe(listViewId7, 0, meHeight);
+                    }
+                }
+            }
+        
+            uexNBListView.cbOpen = function(data){
+                var data = JSON.parse(data);
+                if(data.errorCode == 0){
+                    //alert(data.listViewId);
+                }
+                if(data.listViewId == listViewId1){
+                    isOpen1 = true;
+                }
+                if(data.listViewId == listViewId3){
+                    isOpen2 = true;
+                }
+                if(data.listViewId == listViewId5){
+                    isOpen3 = true;
+                }
+                if(data.listViewId == listViewId7){
+                    isOpen4 = true;
+                }
+            }
+            
+            uexNBListView.onItemClick = function(data){//NBListView点击事件自定义
+                alert("onItemClick:" + data);
+            };
+            uexNBListView.onDeleteClick = function(data){//NBListView点击删除事件自定义
+                if(confirm("确定要删除该条新闻？")){
+                    var data = JSON.parse(data);
+                    deleteData(data.listViewId, data.index);
+                }
+            };
+            
+             uexNBListView.onPullRefreshHeader = function(data){//下拉刷新的监听方法
+                 //alert("onPullRefreshHeader:"+data);
+                var data = JSON.parse(data);
+                if(data.status == 0){
+                    //uexWindow.toast(0,8,"开始刷新...",1000);
+                    setTimeout("setCompleted('" + data.listViewId + "')","2000");
+                }
+                if(data.status == 1){
+                    uexWindow.toast(0,8,"下拉刷新完成...",1000);
+                    if(uexWidgetOne.platformName == "iOS"){
+                        addDataToStart1(data.listViewId);
+                    }else{
+                        addDataToStart(data.listViewId);
+                    }
+                }
+                if(data.status == 2){
+                    uexWindow.toast(0,8,"刷新超时...",1000);
+                }
+            };
+            uexNBListView.onPullRefreshFooter = function(data){//上拉刷新的监听方法
+                // alert("onPullRefreshFooter:"+data);
+                var data = JSON.parse(data);
+                if(data.status == 2){
+                    uexWindow.toast(0,8,"上拉刷新完成...",1000);
+                    if(uexWidgetOne.platformName == "iOS"){
+                        addDataToEnd1(data.listViewId);
+                    }else{
+                        addDataToEnd(data.listViewId);
+                    }
+                }
+            }
+            
+            uexNBListView.onForwardClick = function(data){
+                alert("onForwardClick:" + data);
+            }
+            uexNBListView.onAddAttentionClick = function(data){
+                alert("onAddAttentionClick:" + data);
+            }
+            uexNBListView.onDeleteAttentionClick = function(data){
+                alert("onDeleteAttentionClick:" + data);
+            }
+
+            uexNBListView.onFavoriteClick = function(data){//点击事件
+                var info = JSON.parse(data);
+                updateFavoriteVideoListView(info.listViewId, info.index, 1);
+                uexWindow.toast(0,8,"点赞成功",1000);
+            }
+            uexNBListView.onDislikeClick = function(data){//点击事件
+                var info = JSON.parse(data);
+                updateDislikeVideoListView(info.listViewId, info.index, 1);
+                uexWindow.toast(0,8,"已踩",1000);
+            }
+            uexNBListView.onCommentClick = function(data){//点击事件
+                var info = JSON.parse(data);
+                updateCommentVideoListView(info.listViewId, info.index, 1);
+                uexWindow.toast(0,8,"评论成功",1000);
+            }
+        });
+
+        function setCompleted(listViewId){
+            var params = {
+                listViewId:listViewId
+            }
+            var data = JSON.stringify(params);
+            uexNBListView.setRefreshStatusCompleted(data);//设置刷新完成状态
+        }
+
+        appcan.button(".bc-bg", "", function() {
+            changecolor(preId, this.id);
+            preId = this.id;
+        })
+
+        function changecolor(pre, after) {
+            var bottom = $("#footer").offset().height;
+            var availHeight = $("#body").offset().height;
+            var height = availHeight-bottom;
+            $("#" + pre).removeClass("icon" + pre + "_act").addClass("icon" + pre);
+            $("#" + after).removeClass("icon" + after).addClass("icon" + after + "_act");
+            //hideIndex();
+            if(pre == 4){
+                $("#header" + after).show();
+                hideMe();
+            }else if(pre == 3){
+                 $("#header" + pre).hide();
+                hideTopic();
+            }else if(pre == 2){
+                 $("#header" + pre).hide();
+                hideVideo();
+            }else if(pre == 1){
+                 $("#header" + pre).hide();
+                hideIndex();
+            }
+            if(after == 4){
+                $("#header" + pre).hide();
+                showMe(height);
+            }else if(after == 3){
+                $("#header" + after).show();
+                var top = $("#header3").offset().height;
+                var height = availHeight-top-bottom;
+                showTopic(top,height);
+            }else if(after == 2){
+                $("#header" + after).show();
+                var top = $("#header2").offset().height;
+                var height = availHeight-top-bottom;
+                showVideo(top,height);
+            }else if(after == 1){
+                $("#header" + after).show();
+                var top = $("#header1").offset().height;
+                var height = availHeight-top-bottom;
+                showIndex(top,height);
+            }
+        }
+
+    </script>
+</html>

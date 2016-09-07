@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root layoutId = "topic-item3">
+    <linearlayout width="-1" height="-2" orientation="vertical">
+        <!-- <linearlayout width="-1" height="-2" gravity="centerX" background = "#ffffff" visible = "${concer-top}">
+            <linearlayout width="-2" height="-2" gravity="centerY" padding = "12">
+                <text id = "concer" width = "-2" height = "-2"  textSize = "16"
+                    textColor = "#000000" text="${concer}"  />                
+            </linearlayout>
+            <text width = "-1" height = "1" background = "#cccccc" margin = "0 0 0 15"/>
+        </linearlayout> -->
+        <linearlayout id = "content" orientation = "horizontal" width = "-1"
+                      height = "-2" background = "#ffffff">
+            <text id = "txt" width = "-2" height = "-2" margin="10 10 0 0" text="${topicName}" textSize = "18"
+                  textColor = "#000000"/>
+        </linearlayout>
+    </linearlayout>
+</root>

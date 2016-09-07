@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+
+        <style>
+
+            .bc-bg-silder {
+
+               background-color: red;
+            }
+
+            </style>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        I am the pop view0.
+        <div id="slider" class="slider"></div>
+
+    </body>
+    <script src="js/appcan.js"></script>
+    <script src="js/appcan.control.js"></script>
+    <script src="js/appcan.slider.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            uexWindow.setMultilPopoverFlippingEnbaled(1);
+//            uexLog.sendLog('close PopoverFlipping!');
+        });
+
+//        var slider = appcan.slider({
+//            selector : '#slider',
+//            aspectRatio : 6 / 16,
+//            hasLabel : true,
+//            index : 0
+//        });
+//        slider.set([{
+//            img : "http://test.yyjzt.com/upload/file/20160805/8/df9a8aae-6025-4f0a-bde6-ace154a98e15.png",
+//        }, {
+//            img : "http://test.yyjzt.com/upload/file/20160805/5/e094b39b-8b77-4b31-a4a7-7201f70ddd08.jpg",
+//        }])
+//        slider.on("clickItem", function(index, data) {
+//        })
+    </script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="css/webix.css">
+    </head>
+    <body class="um-vp" ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0">
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn" id="nav-left"></div>
+                <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">test</h1>
+                <div class="nav-btn" id="nav-right">
+                    <!--按钮开始-->
+
+                    <!--按钮结束-->
+                </div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l ">
+
+            </div>
+            <!--content结束-->
+
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/webix.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            
+            try{
+                setTimeout(function(){
+                    var pieChart = webix.ui({
+                view : "chart",
+                type : "pie3D",
+                container : "content",
+                value : "#wts#",
+                color : "#color#",
+                label : "#xtbt#",
+                pieInnerText : "#wts#",
+                shadow : 0,
+                //animate:{type:"flip", subtype:"vertical"},
+                cant : 0.8,
+
+                data : [{
+                    wts : "20",
+                    xtbt : "井下作业生产信息系统",
+                    color : "#ee3639"
+                }, {
+                    wts : "30",
+                    xtbt : "分析化验数据管理系统",
+                    color : "#ee9e36"
+                }, {
+                    wts : "50",
+                    xtbt : "钻采工程信息系统",
+                    color : "#eeea36"
+                }, {
+                    wts : "40",
+                    xtbt : "采油厂生产运行管理系统",
+                    color : "#a9ee36"
+                }, {
+                    wts : "70",
+                    xtbt : "油气田生产管理信息系统",
+                    color : "#36d3ee"
+                }, {
+                    wts : "80",
+                    xtbt : "用户日志查询系统",
+                    color : "#367fee"
+                }, {
+                    wts : "60",
+                    xtbt : "科技信息管理系统",
+                    color : "#9b36ee"
+                }, {
+                    wts : "20",
+                    xtbt : "油田地面工程信息系统",
+                    color : "#ee3639"
+                }, {
+                    wts : "30",
+                    xtbt : "计划管理信息系统",
+                    color : "#ee9e36"
+                }, {
+                    wts : "50",
+                    xtbt : "油田数据质量监控系统",
+                    color : "#eeea36"
+                }, {
+                    wts : "20",
+                    xtbt : "试油数据管理系统",
+                    color : "#ee3639"
+                }, {
+                    wts : "30",
+                    xtbt : "质量标准计量节能管理信息系统",
+                    color : "#ee9e36"
+                }, {
+                    wts : "50",
+                    xtbt : "统一认证客户端",
+                    color : "#eeea36"
+                }]
+            });
+            webix.event(window, "resize", function() {
+                pieChart.adjust();
+            });
+                },1000);
+            
+            }catch(e){
+                alert(e.message);
+            }
+        });
+        function drawpie(){
+            
+        }
+    </script>
+</html>

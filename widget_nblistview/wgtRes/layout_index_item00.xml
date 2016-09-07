@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root layoutId = "index-item00">
+    <linearlayout width = "-2" height = "-1" padding="15 5" background = "#fff" onClick = "onItemClick" orientation = "vertical">
+        <text id = "txt" width = "-2" height = "30" text = "${title}" textSize = "16" textColor= "#000" margin = "0 0 0 0"/>
+        <linearlayout width = "-1" height = "-2" orientation = "horizontal" margin = "0 5 0 0">
+            <img id = "mark" width = "${perw}" height = "${epri}" src = "${markImg}"/> <!-- visible = "${markVisible}" -->
+            <linearlayout width = "-2" height = "-1" orientation = "horizontal" >
+                <text id = "sourceType" width = "-2" height = "-1" text="${source}" textSize = "10"
+                      textColor = "#999999" weight="1" margin = "10 0 0 0"/>
+                <text id = "comment" width = "-2" height = "-1" text="${comment}" textSize = "10"
+                      textColor = "#999999" weight="1" margin = "10 0 0 0"/>
+                <text id = "time" width = "-2" height = "-1" text="${time}" textSize = "10"
+                      textColor = "#999999" weight="2" margin = "10 0 0 0"/>
+            </linearlayout>   
+            <img id = "delete" width = "22" height = "15" src = "res://img/del.png"
+                 gravity = "left" onClick = "onDeleteClick"/>
+        </linearlayout>
+        <text width = "-1" height = "1" background = "#EFEFEF" margin="0 10 0 0"/>
+    </linearlayout>
+</root> 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root layoutId = "index-item02">
+    <!--该布局为右边有一小图样式布局-->
+    <linearlayout id = "content" width = "-1" height = "-2" onClick = "onItemClick"
+                    background = "#ffffff" orientation = "vertical" gravity = "centerY"
+                  padding= "15 5">
+        <linearlayout width = "-2" height = "70" orientation = "horizontal">
+            <text id = "title" width = "-2" height = "-1" text="${title}" textSize = "16"
+                  textColor = "#000000" weight = "2" gravity="top"/>
+            <img id = "newsPic" width="-2" margin="0" height="-1" src="${picPath}" weight = "1"/>
+        </linearlayout>
+        <linearlayout width = "-1" height = "-2" orientation = "horizontal" margin = "0 5 0 0">
+            <img id = "mark" width = "${perw}" height = "${peri}" src = "${markImg}" /> <!--visible = "${markVisible}" -->
+            <linearlayout width = "-2" height = "-1" orientation = "horizontal" >
+                <text id = "sourceType" width = "-2" height = "-1" text="${source}" textSize = "10"
+                      textColor = "#999999" weight="1" margin = "10 0 0 0"/>
+                <text id = "comment" width = "-2" height = "-1" text="${comment}" textSize = "10"
+                      textColor = "#999999" weight="1" margin = "10 0 0 0"/>
+                <text id = "time" width = "-2" height = "-1" text="${time}" textSize = "10"
+                      textColor = "#999999" weight="2" margin = "10 0 0 0"/>
+            </linearlayout>   
+            <img id = "delete" width = "22" height = "15" src = "res://img/del.png"
+                 gravity = "left" onClick = "onDeleteClick"/>
+        </linearlayout>
+        <text width = "-1" height = "1" background = "#EFEFEF" margin="0 10 0 0"/>
+    </linearlayout>
+</root>

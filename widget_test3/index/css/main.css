@@ -1,0 +1,33 @@
+.c-gra-fn3{
+	background-color:#d1d1d1;
+}
+.camera-bg{
+	background-image:url('myImg/camera-bg.png');
+}
+.uwh-pic{
+	width:3.75em;
+	height:3.375em;
+}
+.umar-t-pic{
+	margin-top:-3.5em;
+}
+input[type="radio"] + div>div.tp-edit{
+	background-image: url(myImg/edit.png);
+}
+.t-btn-u1{
+	background-image:url('myImg/t-btn-u1.png');
+}
+.uinn-u1{
+	padding-top:0.33em;
+}
+.uop{
+	background-color:transparent;
+}
+.c-wh
+{
+    background-color:#FFF;
+}
+.uwh-tBtn{
+    width:1.75em;
+    height:1.75em;
+}
